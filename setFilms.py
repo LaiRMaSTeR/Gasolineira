@@ -29,7 +29,6 @@ def logIn(usernamePos, passwordPos):
     pg.press('enter')
 
 def logOut(buttonPos):
-    buttonPos = (996, 131)
     clickFilm(buttonPos[0], buttonPos[1])
 
 def main():
