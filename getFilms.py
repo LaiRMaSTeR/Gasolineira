@@ -2,6 +2,7 @@ import pyautogui as pg
 import numpy as np
 import keyboard as kb
 import argparse as ag
+import os
 
 def getFilms():
     x = [0]
@@ -24,10 +25,11 @@ def main():
     parser.add_argument('-c', '--config', help='Create config file with position of buttons and text fields', action='store_true')
     args = parser.parse_args()
     films = getFilms()
+    path = os.path.dirname(__file__)
     if args.config:
-        np.save("config.npy", films)
+        np.save(os.path.join(path, "config.npy"), films)
     else:
-        np.save("films.npy", films)
+        np.save(os.path.join(path, "films.npy"), films)
 
 if __name__ == "__main__":
     main()

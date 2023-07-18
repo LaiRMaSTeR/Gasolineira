@@ -3,6 +3,7 @@ import numpy as np
 import time as tt
 import datetime as dt
 import argparse as ag
+import os
 
 def norm(x, y):
     return np.sqrt(x**2 + y**2)
@@ -32,15 +33,16 @@ def logOut(buttonPos):
     clickFilm(buttonPos[0], buttonPos[1])
 
 def main():
-    films = np.load("films.npy")
-    config = np.load("config.npy")
+    path = os.path.dirname(__file__)
+    films = np.load(os.path.join(path, "films.npy"))
+    config = np.load(os.path.join(path, "config.npy"))
     x = films[0]
     y = films[1]
     xConfig = config[0]
     yConfig = config[1]
     c = 1
     while(c == 1):
-        if dt.datetime.now().hour == 8 and dt.datetime.now().minute == 28 and dt.datetime.now().second >= 56:
+        if dt.datetime.now().hour == 22 and dt.datetime.now().minute == 42 and dt.datetime.now().second >= 56:
             c = 0
             pg.press('ctrl')
             tt.sleep(0.7)
