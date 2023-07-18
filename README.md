@@ -13,7 +13,7 @@ Z opcją --config pozycje kursora są zapisane do pliku konfiguracyjnego. Trzeba
 # setFilms
 W funkcji logIn() trzeba w odpowiednie argumenty wpisać swojego mejla oraz hasło.
 
-#Uruchamianie pod linuxem
+# Uruchamianie pod linuxem
 Najpierw trzeba wywołać następującą opcję, by root uzyskał uprawnienia interakcji z interfejsami graficznymi:
 ```
 xhost si:localuser:root
