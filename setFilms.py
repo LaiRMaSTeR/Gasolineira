@@ -40,15 +40,16 @@ def main():
     y = films[1]
     xConfig = config[0]
     yConfig = config[1]
+    epsilon = np.random.randint(40)
     c = 1
     while(c == 1):
-        if dt.datetime.now().hour == 8 and dt.datetime.now().minute == 28 and dt.datetime.now().second >= 56:
+        if dt.datetime.now().hour == 8 and dt.datetime.now().minute == 28 and dt.datetime.now().second >= 16 + epsilon:
             c = 0
             pg.press('ctrl')
             tt.sleep(0.7)
             logIn((xConfig[0], yConfig[0]), (xConfig[1], yConfig[1]))
             clickFilm(xConfig[3], yConfig[3])  # guzik z następnym dniem
-            tt.sleep(60)
+            tt.sleep(100 - epsilon)
             for i in range(len(x)):
                 clickFilm(x[i], y[i])
                 print(x[i], y[i])
