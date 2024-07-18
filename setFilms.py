@@ -43,6 +43,7 @@ def main():
     epsilon = np.random.randint(40)
     c = 1
     while(c == 1):
+        tt.sleep(0.1)
         if dt.datetime.now().hour == 8 and dt.datetime.now().minute == 28 and dt.datetime.now().second >= 16 + epsilon:
             c = 0
             pg.press('ctrl')
